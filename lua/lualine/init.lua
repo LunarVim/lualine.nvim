@@ -141,7 +141,8 @@ local function setup_theme()
 				-- use the provided theme as-is
 				return config.options.theme
 			end
-			vim.api.nvim_err_writeln("theme " .. tostring(theme_name) .. " not found, defaulting to auto")
+			-- vim.api.nvim_err_writeln("theme " .. tostring(theme_name) .. " not found, defaulting to auto")
+			print("theme " .. tostring(theme_name) .. " not found, defaulting to auto")
 			return require("lualine.themes.auto")
 		end
 		local theme = get_theme_from_config()
